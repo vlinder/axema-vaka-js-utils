@@ -18,19 +18,19 @@ const readVakaExport = (filename) =>
 /**
  * Write VAKA import file.
  * @param {string} filename filename to write to.
- * @param {ReturnType<typeof deserializeRow>} data Data to write.
+ * @param {Array<ReturnType<typeof deserializeRow>>} data Data to write.
  */
 const writeVakaImport = (filename, data) => {
   const header =
     "Name;IdentityType (0=em 1=code 2=rf 3=mifare);IdentityId;IdentityStatus (0=enabled 1=disabled);PIN;StartTime;StopTime;Accessgroup;Email;Person PhoneNo;Person ShortNo;Person Line (0=local 1=analog 2=extern);OrgGroup;Location;Floor;Apartment;ReferenceId;OrgPhoneNo;OrgShortNo;OrgLine (0=local 1=analog 2=extern);Freetext1;Email;Freenumber;Extended Freetext;DoorControl;RelayControl\n";
-  const outfile = fs.openSync(filename, "w");
+  const outFile = fs.openSync(filename, "w");
   fs.writeSync(
-    outfile,
+    outFile,
     header + data.map(serializeRow).join("\n") + "\n",
     undefined,
     "latin1"
   );
-  fs.closeSync(outfile);
+  fs.closeSync(outFile);
 };
 
 /**
