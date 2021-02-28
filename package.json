@@ -1,0 +1,20 @@
+{
+  "name": "axema-vaka-js-utils",
+  "version": "1.0.0",
+  "description": "Simple tools for managing import/export from Axema VAKA.",
+  "main": "vaka-utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlinder/axema-vaka-js-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlinder/axema-vaka-js-utils/issues"
+  },
+  "homepage": "https://github.com/vlinder/axema-vaka-js-utils#readme"
+}
